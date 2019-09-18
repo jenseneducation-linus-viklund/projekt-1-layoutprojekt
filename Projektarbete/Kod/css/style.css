@@ -9,25 +9,19 @@ body {
   font-size: 100%;
 }
 
-/*@media (max-width: 600px)*/
 .gridcontainer {
   max-width: 1000px;
   min-width: 100px;
   margin: 0 230px;
   display: grid;
-  grid-template-columns: /*repeat(
-    auto-fit,
-    minmax(1000px, 1fr)
-  );*/ 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 300px 300px 70px 300px 150px /*150px 200px*/ 600px 300px 300px 70px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 70px 300px 150px 600px 300px 300px 70px 300px;
   grid-template-areas:
     "top top top aside aside aside"
     "top top top main main main"
     "nav nav nav nav nav nav"
     "boxa boxa boxa boxb boxb boxb"
     "boxa boxa boxa boxb boxb boxb"
-    /*"boxa1 boxa1 boxb1 boxb1 boxc1 boxc1"
-    "boxc2 boxc2 boxc3 boxc3 boxc4 boxc4"*/
     "boxc5 boxc5 boxc5 boxc5 boxc5 boxc5"
     "boxd boxd boxe boxe boxf boxf"
     "boxg boxg boxh boxh boxi boxi"
@@ -146,7 +140,6 @@ a {
   color: #818181fd;
 }
 
-/* gör markerad länk svart när pekare står över */
 a:hover {
   color: #111;
   border-bottom: solid;
