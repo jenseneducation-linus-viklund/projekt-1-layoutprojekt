@@ -1,9 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   width: auto;
 }
 
 .container h3{
-  float: left;
+  position: absolute;
   font-size: 80px;
   margin-top: 16%;
   margin-left: 36%;
@@ -34,7 +39,7 @@ height: 90%;
 nav {
   background: white;
   height: 100px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -43,7 +48,7 @@ nav a{
   text-align: center;
   color: #999999;
   display: block;
-  padding: 10px;
+  padding: 25px 0px;
   margin: 10px 100px 10px 100px;
 }
 
@@ -61,7 +66,6 @@ nav li{
 nav a:hover{
   color: black;
   display: flex; 
-  border-bottom: solid;
 }
 /*----------------*/
 
@@ -76,6 +80,7 @@ nav a:hover{
   height: 1000px;
   width: auto;
 }
+
 .body h1{
   font-size: 75px;
   color: white;
@@ -118,10 +123,13 @@ textarea{
 #textemail{
   width: 30%;
   height: 30%;
+  font-size: 25px;
+  padding: 12px 20px;
   box-sizing: border-box;
   width: 72%;
   height: 80px;
   border-radius: 10px;
+  font-family: "Playfair Display", serif;
 }
 
 label{
