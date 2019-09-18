@@ -1,39 +1,198 @@
-body {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
-  .container {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  
-  header {
-    background:green;
-    height: 50px;
-  }
-  
-  nav {
-    background: rgb(247, 247, 231);
-    height: 100px;
-  }
-  
-  .flex-container {
-    display: flex;
-  }
-  
-  section.first {
-    background: #F33B1A;
+.container {
+  width: auto;
+}
+
+.container h3{
+  float: left;
+  font-size: 80px;
+  margin-top: 16%;
+  margin-left: 36%;
+  font-family: "Playfair Display", serif;
+}
+
+/* HEADER (MED BILD) */
+header {
+  background: #C7DDEA;
+  height: 600px;
+  width: auto;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+
+#bild1{
+display: block;
+float: right;
+margin-right: 10%;
+margin-top: 60px;
+width: 17%;
+height: 90%;
+}
+/* ------------- */
+
+
+/* NAV (4 knappar meny) */
+nav {
+  background: white;
+  height: 100px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: #999999;
+  display: block;
+  padding: 10px;
+  margin: 10px 100px 10px 100px;
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+
+nav li{
+  flex: 1 1 1;
+}
+
+nav a:hover{
+  color: black;
+  display: flex; 
+  border-bottom: solid;
+}
+/*----------------*/
+
+/* Container med email, meddelande och button */
+.flex-container {
+  display: flex;
+  color: #DEDBDA;
+}
+
+.body{
+  background: #A9A19E;
+  height: 1000px;
+  width: auto;
+}
+.body h1{
+  font-size: 75px;
+  color: white;
+  margin-top: 25%;
+  margin-left: 200px;
+  font-weight: bold;
+}
+
+section.first{
     width: 50%;
-  }
-  
-  section.second {
-    background: #F16C1F;
+    height: 1000px;
+    background: #A9A19E;
+    font-family: "Playfair Display", serif;
+}
+
+section.second{
     width: 50%;
-    padding: 30px;
+    height: 1000px;
+    background: #A9A19E;
+    margin-top: 10%;
+    font-family: "Playfair Display", serif;
+}
+
+#text-form *{
+  display: block;
+}
+
+textarea{
+  width: 72%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: #ffff;
+  font-size: 30px;
+  resize: none;
+  border-radius: 10px;
+}
+
+#textemail{
+  width: 30%;
+  height: 30%;
+  box-sizing: border-box;
+  width: 72%;
+  height: 80px;
+  border-radius: 10px;
+}
+
+label{
+  font-size: 35px;
+  margin: 50px 0 10px 0;
+}
+
+.button {
+    background-color: #ffff;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 26px;
+    margin-left: 50%;
+    margin-top: 5%;
+    box-shadow: 0 3px #999;
+    font-family: "Roboto Slab", serif;
   }
-  
-  footer {
-    background: #ccf;
-    height: 100px;
-  }
-  
+/*--------------------*/
+
+/* KARTA BAKGRUND + BOX MED TEXT*/
+
+#bild2{
+  max-width: 100%;
+  padding: 0%;
+  margin: 0;
+}
+
+.container2{
+  position: relative;
+  background-color: #777574;
+}
+
+.text-block{
+  position: absolute;
+  height: 350px;
+  width: 500px;
+  top: 12%;
+  left: 7%;
+  background-color: #FAB131;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+}
+
+h6{
+  font-size: 20 px;
+  color: #FEEFD6;
+  font-family: "Playfair Display", serif;
+}
+
+#pin{
+position: absolute;
+  top: 200px;
+  left: 900px;
+  height: 300px;
+}
+
+/*-------------*/
+
+
+/* SIDFOT */
+
+footer {
+  background: #777574;
+  height: 500px;
+  width: auto;
+}
+/*----------*/

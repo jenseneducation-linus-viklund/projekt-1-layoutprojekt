@@ -1,39 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+/* kan eg tas bort men den påverkar bildens positionering */
+
 body {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
-  .container {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  
-  header {
-    background:green;
-    height: 50px;
-  }
-  
-  nav {
-    background: rgb(247, 247, 231);
-    height: 100px;
-  }
-  
-  .flex-container {
-    display: flex;
-  }
-  
-  section.first {
-    background: #F33B1A;
-    width: 50%;
-  }
-  
-  section.second {
-    background: #F16C1F;
-    width: 50%;
-    padding: 30px;
-  }
-  
-  footer {
-    background: #ccf;
-    height: 100px;
-  }
-  
+  background: #eeee;
+  font-family: "Playfair Display", serif;
+  font-size: 100%;
+}
+
+/*@media (max-width: 600px)*/
+.gridcontainer {
+  max-width: 1000px;
+  min-width: 100px;
+  margin: 0 230px;
+  display: grid;
+  grid-template-columns: /*repeat(
+    auto-fit,
+    minmax(1000px, 1fr)
+  );*/ 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 70px 300px 150px /*150px 200px*/ 600px 300px 300px 70px 300px;
+  grid-template-areas:
+    "top top top aside aside aside"
+    "top top top main main main"
+    "nav nav nav nav nav nav"
+    "boxa boxa boxa boxb boxb boxb"
+    "boxa boxa boxa boxb boxb boxb"
+    /*"boxa1 boxa1 boxb1 boxb1 boxc1 boxc1"
+    "boxc2 boxc2 boxc3 boxc3 boxc4 boxc4"*/
+    "boxc5 boxc5 boxc5 boxc5 boxc5 boxc5"
+    "boxd boxd boxe boxe boxf boxf"
+    "boxg boxg boxh boxh boxi boxi"
+    "block block block block block block"
+    "footer footer footer footer footer footer";
+}
+
+header {
+  background: lightblue;
+  grid-area: top;
+}
+
+h1 {
+  padding: 40px 75px 0px 100px;
+  text-align: left;
+  font-family: "Playfair Display", serif;
+  font-size: 47px;
+  grid-area: top;
+  height: 110px;
+}
+
+p1 {
+  padding: 0px 110px 13px 100px;
+  color: rgb(92, 91, 91);
+  font-size: 16px;
+  line-height: 1.6;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  grid-area: top;
+}
+
+/*Span gör texten vit i p1*/
+span.white {
+  color: snow;
+}
+
+/* Button1- knapp utan JS*/
+.button1 {
+  background-color: rgba(255, 255, 255, 0.933);
+  border: none;
+  color: black;
+  padding: 15px;
+  margin: 15px 0px 0px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 3px #999;
+}
+
+img {
+  height: 270px;
+  padding: 0px 10px 20px 200px;
+  display: inline-block;
+  grid-area: top;
+}
+
+aside {
+  background: #ff7f50;
+  grid-area: aside;
+  text-align: center;
+  padding: 100px 0px 150px 0px;
+}
+
+h3 {
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  grid-area: aside;
+
+  text-align: center;
+  display: inline;
+}
+
+main {
+  background: #f39c12;
+  grid-area: main;
+  text-align: center;
+  padding: 80px;
+}
+
+p2 {
+  grid-area: boxb;
+  color: #444343;
+  font-size: 14px;
+  font-family: "Roboto Slab", serif;
+  display: block;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* nav utan js  */
+.nav {
+  background-color: #eeee;
+  grid-area: nav;
+}
+
+ul {
+  margin: 0;
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  margin: 3vh 5vw;
+  font-size: 2vh;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  color: #818181fd;
+}
+
+/* gör markerad länk svart när pekare står över */
+a:hover {
+  color: #111;
+  border-bottom: solid;
+}
+
+.boxa {
+  color: white;
+  padding: 100px 50px 0px 100px;
+  background: #b6b1b1ee;
+  grid-area: boxa;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  text-align: center;
+  display: inline;
+}
+
+/* knapp utan js, skuggad,  */
+.button2 {
+  background-color: rgba(255, 255, 255, 0.933);
+  border: none;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 40px 0px;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 30px;
+  font-family: "Roboto Slab", serif;
+  box-shadow: 0 3px #999;
+}
+
+.boxb {
+  padding: 110px;
+  text-align: center;
+  background: #b6b1b1ee;
+  grid-area: boxb;
+}
+
+p3 {
+  grid-area: boxb;
+  color: #444343;
+  font-size: 14px;
+  font-family: "Roboto Slab", serif;
+  display: block;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.boxc {
+  background: #f39c12;
+  grid-area: boxc;
+}
+
+.boxc5 {
+  background: #f39c12;
+  grid-area: boxc5;
+  text-align: center;
+  padding-top: 80px;
+}
+
+p4 {
+  padding: 30px 250px 0px 250px;
+  grid-area: boxc5;
+  color: #444343;
+  font-size: 14px;
+  font-family: "Roboto Slab", serif;
+  display: block;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.boxd {
+  padding: 10px;
+  background: lightblue;
+  grid-area: boxd;
+}
+
+h4 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  padding: 25px 50px 45px 45px;
+  color: #111;
+  grid-area: boxd;
+  display: inline-block;
+}
+
+h5 {
+  padding-left: 20px;
+  color: #444343;
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+p5 {
+  padding: 10px 70px 50px 70px;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.boxe {
+  background-color: #eeee;
+  grid-area: boxe;
+}
+
+.boxf {
+  background-color: #b6b1b1ee;
+  grid-area: boxf;
+}
+
+.boxg {
+  background-color: #eeee;
+  grid-area: boxg;
+}
+
+.boxh {
+  background-color: #ff7f50;
+  grid-area: boxh;
+}
+
+.boxi {
+  background-color: #eeee;
+  grid-area: boxi;
+}
+
+/* scroll-bar utan js */
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #696969ee;
+  color: rgb(41, 40, 40);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  grid-area: block;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+footer {
+  background-color: #504f4f;
+  grid-area: footer;
+}
